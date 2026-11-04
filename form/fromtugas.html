@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Siswa Baru</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            padding: 40px 20px;
+        }
+
+        .form-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-top: 6px solid #2f66ff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 26px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2b580c;
+        }
+
+        .row-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .row-group input {
+            flex: 1;
+        }
+
+        .phone-input {
+            display: flex;
+            gap: 8px;
+        }
+
+        .phone-prefix {
+            width: 70px !important;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .inline-options {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding-top: 4px;
+        }
+
+        .inline-options label {
+            font-weight: normal;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: #2b580c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #1e3f08;
+        }
+
+        @media (max-width: 480px) {
+            .row-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-card">
+        <h2>Pendaftaran Siswa Baru</h2>
+        <form>
+            <div class="form-group">
+                <label for="nisn">Nomor Induk / NISN</label>
+                <input type="text" id="nisn" name="nisn" placeholder="Masukkan NISN">
+            </div>
+
+            <div class="form-group">
+                <label>Nama Lengkap Siswa</label>
+                <div class="row-group">
+                    <input type="text" name="nama_depan" placeholder="Nama Depan">
+                    <input type="text" name="nama_belakang" placeholder="Nama Belakang">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nama_wali">Nama Orang Tua / Wali</label>
+                <input type="text" id="nama_wali" name="nama_wali" placeholder="Nama lengkap orang tua">
+            </div>
+
+            <div class="form-group">
+                <label>Tanggal Lahir</label>
+                <div class="row-group">
+                    <input type="text" name="tgl" placeholder="TGL (DD)">
+                    <input type="text" name="bln" placeholder="BLN (MM)">
+                    <input type="text" name="thn" placeholder="THN (YYYY)">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nohp">Nomor Telepon / WA</label>
+                <div class="phone-input">
+                    <input type="text" class="phone-prefix" value="+62" readonly>
+                    <input type="tel" id="nohp" name="nohp" placeholder="8123456789">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Kata Sandi Akun</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <div class="inline-options">
+                    <label><input type="radio" name="jk" value="Laki-laki"> Laki-laki</label>
+                    <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Jurusan yang Minati</label>
+                <div class="inline-options" style="flex-wrap: wrap;">
+                    <label><input type="checkbox" name="jurusan" value="RPL"> RPL</label>
+                    <label><input type="checkbox" name="jurusan" value="TKJ"> TKJ</label>
+                    <label><input type="checkbox" name="jurusan" value="MM"> Multimedia</label>
+                    <label><input type="checkbox" name="jurusan" value="AK"> Akuntansi</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="program">Program Keahlian</label>
+                <select id="program" name="program">
+                    <option value="">-- Pilih Program --</option>
+                    <option value="reguler">Reguler</option>
+                    <option value="unggulan">Kelas Unggulan</option>
+                    <option value="industri">Kelas Industri</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="foto">Unggah Foto Siswa</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="kota">Kota Asal</label>
+                <input type="text" id="kota" name="kota">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat Lengkap</label>
+                <textarea id="alamat" name="alamat" placeholder="Tuliskan alamat rumah..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
+        </form>
+    </div>
+    1
+</body>
+
+</html>

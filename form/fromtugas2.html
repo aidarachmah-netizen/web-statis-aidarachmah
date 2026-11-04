@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f1f3;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border: 10px solid #287b88;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            font-size: 30px;
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .field {
+            flex: 1;
+            min-width: 0;
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            color: #339b8b;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #339b8b;
+        }
+
+        .choice {
+            color: #555;
+            font-weight: normal;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 10px;
+        }
+
+        input[type="range"] {
+            width: 75%;
+        }
+
+        output {
+            display: inline-block;
+            background: #20b5a5;
+            color: white;
+            padding: 7px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .age-value {
+            color: #555;
+            padding: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            color: white;
+            background: #287b88;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #205e68;
+        }
+
+        @media (max-width: 550px) {
+            .row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .form-container {
+                padding: 18px;
+                border-width: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Create Account</h1>
+        <form onsubmit="return checkPassword(event)">
+            <div class="row">
+                <div class="field"> <label for="firstName">First Name *</label> <input type="text" id="firstName"
+                        placeholder="Enter your first name" required> </div>
+                <div class="field"> <label for="lastName">Last Name</label> <input type="text" id="lastName"
+                        placeholder="Enter your last name"> </div>
+            </div>
+            <div class="field"> <label for="email">Email *</label> <input type="email" id="email"
+                    placeholder="Enter your email" required> </div>
+            <div class="row">
+                <div class="field"> <label for="password">Password *</label> <input type="password" id="password"
+                        placeholder="Enter your password" required> </div>
+                <div class="field"> <label for="confirmPassword"> Confirm Password * </label> <input type="password"
+                        id="confirmPassword" placeholder="Confirm your password" required> </div>
+            </div>
+            <div class="row">
+                <div class="field"> <label>Gender</label> <label class="choice"> <input type="radio" name="gender"
+                            value="Male"> Male </label> <label class="choice"> <input type="radio" name="gender"
+                            value="Female"> Female </label> </div>
+                <div class="field"> <label>Hobbies</label> <label class="choice"> <input type="checkbox" value="Music">
+                        Music </label> <label class="choice"> <input type="checkbox" value="Sports"> Sports </label>
+                    <label class="choice"> <input type="checkbox" value="Travel"> Travel </label> <label class="choice">
+                        <input type="checkbox" value="Movies"> Movies </label> </div>
+            </div>
+            <div class="row">
+                <div class="field"> <label for="income">Source of Income</label> <select id="income">
+                        <option>Student</option>
+                        <option>Employed</option>
+                        <option>Self-employed</option>
+                        <option>Other</option>
+                    </select> </div>
+                <div class="field"> <label for="incomeRange">Income</label> <input type="range" id="incomeRange" min="0"
+                        max="100000" step="1000" value="20000"
+                        oninput="incomeOutput.value =                         Number(this.value).toLocaleString('en-US')">
+                    <output id="incomeOutput">20,000</output> </div>
+            </div>
+            <div class="row">
+                <div class="field"> <label for="photo">Upload Profile Picture</label> <input type="file" id="photo"
+                        accept="image/*"> </div>
+                <div class="field"> <label for="age">Age</label> <input type="number" id="age" min="1" max="100"
+                        placeholder="18"> </div>
+            </div>
+            <div class="field"> <label for="bio">Bio</label> <textarea id="bio" rows="3"
+                    placeholder="Tell us about yourself"></textarea> </div> <button type="submit">Create
+                Account</button>
+        </form>
+    </div>
+    <script>         function checkPassword(event) { event.preventDefault(); const password = document.getElementById("password").value; const confirmPassword = document.getElementById("confirmPassword").value; if (password !== confirmPassword) { alert("Password tidak sama!"); return false; } alert("Form berhasil diperiksa!"); return false; }     </script>
+</body>
+
+</html>

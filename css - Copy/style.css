@@ -1,0 +1,140 @@
+/* Pengaturan Utama & Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a0b2e, #3b1454);
+    color: #f3e8ff;
+}
+
+/* Header & Navigasi */
+header {
+    background: rgba(45, 15, 71, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo-area h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #d8b4fe;
+    letter-spacing: 1px;
+}
+
+.logo-area p {
+    margin: 0;
+    font-size: 11px;
+    color: #a78bfa;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #c084fc;
+    display: none; /* Disembunyikan agar rapi di header, bisa diubah jika ingin ditampilkan */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #e9d5ff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #7e22ce;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+/* Area Konten & Min-Height */
+main {
+    padding-top: 100px; /* Jarak agar tidak tertutup header fixed */
+}
+
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: rgba(67, 24, 107, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    font-size: 26px;
+    color: #f3e8ff;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #d8b4fe;
+    font-size: 16px;
+}
+
+/* Styling Gambar */
+.section-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling Kontak */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fbcfe8;
+}

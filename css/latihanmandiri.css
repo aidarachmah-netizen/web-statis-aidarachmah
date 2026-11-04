@@ -1,0 +1,182 @@
+
+/* Reset & Font Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Judul */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+/* Form Group */
+p {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #4a5568;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Input, Select, dan Textarea */
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+/* Radio Button */
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+/* Tombol Form */
+button[type="submit"],
+button[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background-color: #3182ce;
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background-color: #2b6cb0;
+}
+
+button[type="reset"] {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+button[type="reset"]:hover {
+    background-color: #cbd5e0;
+}
+
+/* Garis Pemisah */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 30px 0;
+}
+
+/* Kolom Pencarian */
+.search-box {
+    max-width: 300px;
+}
+
+/* Tabel Data Siswa */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+th {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #f7fafc;
+}
+
+/* Tombol Aksi Tabel */
+td button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+td button:first-child {
+    background-color: #ecc94b;
+    color: #744210;
+}
+
+td button:first-child:hover {
+    background-color: #d69e2e;
+}
+
+td button:last-child {
+    background-color: #f56565;
+    color: #ffffff;
+}
+
+td button:last-child:hover {
+    background-color: #e53e3e;
+}

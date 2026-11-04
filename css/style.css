@@ -1,0 +1,47 @@
+p   {
+    font-style: italic;
+    color: blueviolet;
+}
+
+h1 {
+    font-family: 'Courier';
+    color: blueviolet;
+}
+
+section {
+    min-height: 150vh;
+}
+
+h4 {
+    font-style: oblique;
+    color: blueviolet;
+}
+
+.navbar {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  
+}
+.kotakpanjang{
+    background-color: #3498db; 
+    border: 2px solid #2980b9;
+    border-radius: 12px;
+    color: white;            
+    padding: 15px 25px;        
+    display: inline-block;    
+    font-family: Arial, sans-serif;
+}
+
+.kotakpanjang1{
+    background-color: #751beb; 
+    border: 2px solid #000000;
+    border-radius: 12px;
+    color: rgb(186, 53, 226);            
+    padding: 15px 25px;        
+    display: inline-block;    
+    font-family: Arial, sans-serif;
+}

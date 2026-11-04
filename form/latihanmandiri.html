@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas from</title>
+</head>
+
+<body>
+
+    <h2> Tambah Data siswa</h2>
+    <from>
+        <p>
+            <label>Nis:</label><br>
+            <input type="text" placeholder="Masukan Nis">
+        </p>
+
+        <p>
+            <label> Nama Lengkap:</label><br>
+            <input type="text" placeholder="Masukan Nama Lengkap">
+        </p>
+
+        <p>
+            <label> Kelas:</label><br>
+            <select>
+                <option> Pilih Kelas</option>
+                <option> XI RPL 1</option>
+                <option> XI RPL 2</option>
+                <option> XI RPL 3</option>
+                <option> XI RPL 4</option>
+            </select>
+        </p>
+
+        <P>
+            <Label> Jenis Kelamin</Label><br>
+            <input type="radio" name="jk" value="Laki Laki" > Laki Laki
+            <input type="radio" name="jk" value="Perempuan" checked> Perempuan
+        </P>
+
+        <p>
+            <label> Tanggal Lahir</label>
+            <input type="date">
+        </p>
+
+        <button type="submit">Simpan</button>
+        <button type="reset">reset</button>
+    </from>
+
+    <hr>
+    <h2>Data Siswa</h2>
+    <p> <input type="text" placeholder="Cari nama atau NIS..."> </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>NIS</th>
+                <th>Nama Lengkap</th>
+                <th>Kelas</th>
+                <th>Jenis Kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>001</td>
+                <td>Aida Rachmah Aulia</td>
+                <td>XI RPL 3</td>
+                <td>Perempuan</td>
+                <td>2009-04-19</td>
+                <td> <button>Edit</button> <button>Hapus</button> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>002</td>
+                <td>Rehan Kaysha Nugraha</td>
+                <td>VIII B</td>
+                <td>Laki-laki</td>
+                <td>2011-05-12</td>
+                <td> <button>Edit</button> <button>Hapus</button> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>003</td>
+                <td>Someone</td>
+                <td> TBSM </td>
+                <td> Laki-laki</td>
+                <td>2008-07-10</td>
+                <td> <button>Edit</button> <button>Hapus</button> </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aida Studio</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1,9;
+        }
+
+        /* HEADER */
+        header {
+            display: grid;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid #797878;
+        }
+
+        header h1 {
+            font-size: 50px;
+            font-weight: 6000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* BUKU PILIHAN */
+        .buku-pilihan h2 {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: #666;
+            
+        }
+
+        .buku-pilihan h3 {
+            font-size:30px;
+            margin-bottom: 15px;
+        }
+
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .card h4 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #3e3c3c;
+            margin-bottom: 12px;
+            font-style: unset;
+        }
+
+        .buku-pilihan {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lensa Studio</h1>
+        <nav> <a href="#">Galeri</a> <a href="#">Tentang</a> <a href="#">Layanan</a><a href="#">Kontak</a>  </nav>
+    </header>
+    
+        
+        <div class="buku-pilihan">
+            <h3>Koleksi Karya Terbaru <h/3>
+            <div class="buku-pilihan"></div>    
+             <h2>Kumpulan hasil Jepretan pilihan dari berbagai sesi pemotretan</h2>
+            </h3>
+            <div class="grid-buku">
+                <div class="card">
+                 <div class="hero-avatar">
+            <img src="assests/img/cahayasenjapantai.jpg"style="width: 200px; height: 200px;px; border-radius: 0px;">
+            ></img>  
+                    <h4>POTRET</h4>
+                    <p> Cahaya Senja</p> 
+                </div>
+                <div class="card">
+                    <div class="hero-avatar">
+            <img src="assests/img/jalanmalambraga.jpg"style="width: 200px; height: 200px;px; border-radius: 0px;">
+            ></img>  
+                    <h4>KOTA</h4>
+                    <p>Jalanan Malam</p> 
+                </div>
+                <div class="card">
+                    <div class="hero-avatar">
+            <img src="assests/img/sisidanausitupatenggang.jpg"style="width: 200px; height: 200px;px; border-radius: 0px;">
+            ></img>  
+                    <h4>ALAM</h4>
+                    <p>Tepi Danau</p> 
+                </div>
+            </div>
+        </div>
+    
+
+<html/>
